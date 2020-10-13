@@ -1,11 +1,14 @@
-class Solution:
+
+class Solution(object):
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        seen = {}
-        for i, v in enumerate(nums):
-            remaining = target - v
-            if remaining in seen:
-                return [seen[remaining], i]
-            seen[v] = i
+        wanted = {}
+        # for i, v in enumerate(nums):
+        for i in range(len(nums)):
+            n = nums[i]
+            if n in wanted:
+                return [wanted[n], i]
+            else:
+                wanted[target-n] = i
         return []
 
 # 思路1:
@@ -19,8 +22,8 @@ class Solution:
 #     如果在字典中存在
 #         就反回字典值 和 i
 #       否则返向构造字典, k[v] = i
-# 再否则返回空    
-
+# 再否则返回空
+# 使用 else 更规范一些
 
 # 思路2:
 # 两次遍历, 如果和为目标,则输出, 差

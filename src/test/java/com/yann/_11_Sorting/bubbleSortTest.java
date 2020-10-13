@@ -12,6 +12,7 @@ public class bubbleSortTest {
     private static Integer[] expected;
     private static Integer[] actual;
 
+
     @BeforeClass
     public static  void setUp() throws Exception {
         solution1 = new bubbleSort.Solution1();

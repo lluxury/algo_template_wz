@@ -12,14 +12,16 @@ public class _9 {
             if (x < 0) {
                 return false;
             } else if (x == 0) {
-                return false;
+//                return    false;
+                return true;
             } else if (x % 10 == 0) {
                 return false;
             }
             int reversed = 0;
             while (x > reversed) {
                 int digit = x % 10;
-                reversed += 10;
+//                reversed += 10;
+                reversed *= 10;
                 reversed += digit;
                 x /= 10;
             }
